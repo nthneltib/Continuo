@@ -1,0 +1,41 @@
+.footer {
+  padding: 48px 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 20px;
+  width: auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--fs-label);
+  color: var(--color-text);
+  flex-wrap: wrap;
+}
+
+.links a {
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--color-pri);
+}
+
+.muted {
+  color: var(--color-text-faint);
+}
+
+.author {
+  color: #000000;
+}

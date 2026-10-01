@@ -1,0 +1,156 @@
+.section {
+  padding: 96px 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  max-width: 400px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  font-weight: 600;
+}
+
+.sub {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+.tabsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scrollHint {
+  font-size: var(--fs-label);
+  font-weight: 500;
+  color: var(--color-text-sec);
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tab {
+  background: var(--color-surface);
+  border: 0.5px solid transparent;
+  padding: 8px;
+  font-size: var(--fs-label);
+  font-weight: 400;
+  color: var(--color-text-sec);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.tabActive {
+  border-color: var(--color-pri);
+  color: var(--color-pri);
+}
+
+.panelWrap {
+  flex: 1 1 500px;
+  max-width: 620px;
+  height: 380px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.panelBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.panelCard {
+  position: absolute;
+  left: 30px;
+  right: 0;
+  top: 0;
+  bottom: 24px;
+  background: var(--color-white);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableScroll {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+.table th {
+  text-align: left;
+  padding: 10px 8px;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.table td {
+  text-align: left;
+  padding: 8px;
+  color: var(--color-text-sec);
+  border-top: 1px solid #f0f0f0;
+  white-space: nowrap;
+  transition: background-color 0.25s ease;
+}
+
+.table tr.activeRow td {
+  background: var(--color-surface);
+}
+
+.statusGood {
+  color: var(--color-success);
+}
+.statusHold {
+  color: var(--color-text-sec);
+}
+.statusNG {
+  color: var(--color-danger);
+}
+.timecodeCell {
+  color: var(--color-amber);
+  font-variant-numeric: tabular-nums;
+}
+.durationCell {
+  color: var(--color-gold);
+  font-variant-numeric: tabular-nums;
+}
+.continuityIssue {
+  color: var(--color-amber);
+}
+
+@media (max-width: 720px) {
+  .panelWrap {
+    height: 320px;
+  }
+}
